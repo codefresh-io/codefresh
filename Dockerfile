@@ -33,6 +33,9 @@ RUN yarn install --prod --frozen-lockfile && \
 
 COPY . /cf-cli
 
+RUN for p in $(cat package.json | jq -r '.devDependencies | keys[] '); \
+    do yarn remove $p; done
+    
 RUN yarn generate-completion
 RUN apk del yarn
 
