@@ -15,6 +15,7 @@
     "build-local-docs": "node ./docs/index.js",
     "build-public-docs": "node ./docs/index.js && cd temp && hugo",
     "postinstall": "node check-version.js"
+
   },
   "bin": {
     "codefresh": "./lib/interface/cli/codefresh"
@@ -100,3 +101,4 @@
     ]
   }
 }
+
