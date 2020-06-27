@@ -14,7 +14,8 @@
     "serve-docs-beta": "ALLOW_BETA_COMMANDS=true yarn build-local-docs && cd temp && hugo server -D",
     "build-local-docs": "node ./docs/index.js",
     "build-public-docs": "node ./docs/index.js && cd temp && hugo",
-    "postinstall": "node check-version.js"
+    "postinstall": "node check-version.js",
+
   },
   "bin": {
     "codefresh": "./lib/interface/cli/codefresh"
@@ -100,3 +101,4 @@
     ]
   }
 }
+
