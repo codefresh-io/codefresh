@@ -1652,33 +1652,6 @@
         "x-sdk-interface": "pipelines.analyze"
       }
     },
-    "/helm/cluster-config/{selector}": {
-      "get": {
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/Json"
-          }
-        },
-        "tags": [
-          "helm.cluster-config"
-        ],
-        "operationId": "helm-cluster-config-get",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "selector",
-            "description": "Cluster selector",
-            "schema": {
-              "type": "string"
-            },
-            "required": true
-          }
-        ],
-        "summary": "Get cluster config",
-        "x-sdk-interface": "helm.cluster-config.get"
-      }
-    },
-
     "/annotations": {
       "delete": {
         "responses": {
@@ -5741,6 +5714,14 @@
               "type": "string"
             },
             "description": "project id"
+          },
+          {
+            "in": "query",
+            "name": "isTemplate",
+            "schema": {
+              "type": "boolean"
+            },
+            "description": "templates"
           }
         ],
         "operationId": "pipelines-list",
@@ -6090,6 +6071,39 @@
         "operationId": "pipelines-replace",
         "summary": "Replace",
         "x-sdk-interface": "pipelines.replace"
+      },
+      "post": {
+        "parameters": [
+          {
+            "description": "Name of pipeline",
+            "in": "path",
+            "name": "name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ok"
+          }
+        },
+        "tags": [
+          "pipelines"
+        ],
+        "operationId": "pipelines-create-pipeline-from-template",
+        "summary": "Create pipeline from template",
+        "x-sdk-interface": "pipelines.createPipelineFromTemplate"
       }
     },
 
