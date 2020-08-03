@@ -1652,6 +1652,41 @@
         "x-sdk-interface": "pipelines.analyze"
       }
     },
+    "/argo": {
+      "post": {
+        "x-action": "create",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/Json"
+          }
+        },
+        "tags": [
+          "environments-v2"
+        ],
+        "operationId": "environments-v2-add-provider",
+        "requestBody": {
+          "$ref": "#/components/requestBodies/Json"
+        },
+        "summary": "Create",
+        "parameters": [],
+        "x-sdk-interface": "environments-v2.add-provider",
+        "x-endpoint": {
+          "isEndpoint": false,
+          "auth": {
+            "middleware": [
+              "auth.isAuthenticated"
+            ],
+            "acl": {
+              "resource": "environments-v2"
+            }
+          },
+          "postMiddleware": [
+            "global.iseMiddleware"
+          ],
+          "handler": "argo.addIntegration"
+        }
+      }
+    },
     "/helm/cluster-config/{selector}": {
       "get": {
         "responses": {
