@@ -43,7 +43,10 @@ steps:
         registry: dockerhub
         title: "push to dockerhub" 
       push_to_gcr:
-        title: "push to gcr" 
+        title: "push to gcr"
+      push_to_quay:
+        registry: cf-quay
+        title: "push to quay"
 
   execute_release_pipeline:
     title: "Execute release pipeline in case version was changed"
