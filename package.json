@@ -53,7 +53,7 @@
     "filesize": "^3.5.11",
     "firebase": "git+https://github.com/codefresh-io/firebase.git#80b2ed883ff281cd67b53bd0f6a0bbd6f330fed5",
     "flat": "^4.1.0",
-    "inquirer": "^7.1.0",
+    "inquirer": "^7.3.3",
     "js-yaml": "^3.10.0",
     "jsonwebtoken": "^8.1.0",
     "kefir": "^3.8.1",
