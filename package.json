@@ -35,7 +35,7 @@
     "bluebird": "^3.5.1",
     "cf-errors": "^0.1.12",
     "chalk": "^4.1.0",
-    "cli-progress": "3.6.0",
+    "cli-progress": "3.8.2",
     "codefresh-sdk": "^1.9.15",
     "colors": "^1.1.2",
     "columnify": "^1.5.4",
