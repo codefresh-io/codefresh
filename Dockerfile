@@ -11,7 +11,7 @@ RUN pip install yq==${YQ_VERSION}
 RUN pyinstaller --noconfirm --onefile --log-level DEBUG --clean --distpath /tmp/ $(which yq)
 
 # Main
-FROM node:10.23.0-alpine3.11
+FROM node:dubnium-alpine
 
 RUN apk --update add --no-cache ca-certificates git curl bash yarn jq=1.6-r0
 
